@@ -1,0 +1,205 @@
+.form {
+    width: 100%;
+    height: 40.25rem;
+    border-radius: 1.25rem;
+    background: #565ABB;
+    padding: 19px;
+
+    .form-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-bottom: 15px;
+
+        .title {
+            color: #FEFCFC;
+            font-family: Poppins;
+            font-size: 1.375rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        .pfp-img {
+            width: 3.125rem;
+            height: 3.125rem;
+            flex-shrink: 0;
+            border-radius: 0.5rem;
+            object-fit: cover;
+        }
+    }
+
+    .card-con {
+
+        margin-bottom: 27px;
+
+        .title {
+            color: #FEFCFC;
+            font-family: Nunito;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            margin-bottom: 14px;
+        }
+
+        .card-type {
+            display: flex;
+            justify-content: space-between;
+            gap: 17px;
+
+
+
+            label {
+                width: 75px;
+                height: 55px;
+                border-radius: 0.3125rem;
+                background-color: #6F73C1;
+
+                .card {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+                }
+
+                .other {
+                    color: #FEFCFC;
+                    font-family: Poppins;
+                    font-size: 0.875rem;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+            }
+
+            label.selected {
+                border: 2px solid blue;
+            }
+
+            .others {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+        }
+    }
+
+    .card-details {
+        .input {
+            width: 100%;
+            margin-bottom: 14px;
+
+            .input-label {
+                display: block;
+                color: #FEFCFC;
+                font-family: Poppins;
+                font-size: 0.875rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                margin-bottom: 5px;
+            }
+
+            input {
+                color: #C4C4C4;
+                font-family: Poppins;
+                font-size: 0.75rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+
+                width: 100%;
+                height: 2.5rem;
+
+                padding: 11px 18px;
+
+                border-radius: 0.375rem;
+                border: none;
+                background: #6268C6;
+            }
+
+            input:focus {
+
+                outline: #C4C4C4;
+            }
+
+            input::placeholder {
+                color: #C4C4C4;
+                font-family: Poppins;
+                font-size: 0.75rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+        }
+
+        .card-add-info {
+            display: flex;
+            gap: 4px;
+        }
+    }
+
+    .tagline {
+        border: none;
+        border-top: 1px solid #5F65C3;
+        margin: 8px auto 14.5px;
+    }
+
+    .totalCostInfo {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        margin-bottom: 26px;
+
+        .cost-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            color: #FEFCFC;
+            text-align: right;
+            font-family: Poppins;
+            font-size: 0.875rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+    }
+
+    .sumbit-btn {
+        width: 100%;
+        height: 60px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        padding: 24px 18px;
+        border-radius: 0.75rem;
+        background: #4DE1C1;
+        border: none;
+
+        color: #FEFCFC;
+        font-family: Poppins;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+        .text {
+            display: flex;
+            align-items: center;
+
+            .right-icon {
+                margin-left: 2px;
+            }
+        }
+
+    }
+
+
+}

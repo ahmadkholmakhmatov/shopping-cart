@@ -1,0 +1,124 @@
+.cart {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 24px;
+    
+    padding: 10px 9px;
+    padding-right: 23px;
+    
+    border-radius: 0.9375rem;
+    background: #FFF;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+
+    .cart-info {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+
+        .cart-img {
+            width: 5rem;
+            height: 5.14288rem;
+            flex-shrink: 0;
+            border-radius: 0.5rem;
+        }
+
+        .text {
+            .product {
+                color: #1E1E1E;
+                font-family: Poppins;
+                font-size: 1.125rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+
+            .ingredient {
+                color: #1E1E1E;
+                font-family: Nunito;
+                font-size: 0.875rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+        }
+    }
+
+    .counts {
+        display: flex;
+        align-items: center;
+
+        .count {
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 22px;
+            margin-right: 6px;
+        }
+
+        .count-buttons {
+
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+
+            .increment {
+                width: 20px;
+                height: 8.57px;
+                background: transparent;
+                border: none;
+
+                .up-arrow {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .decrement {
+                width: 20px;
+                height: 8.57px;
+                background: transparent;
+                border: none;
+
+                .down-arrow {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transform: rotate(180deg);
+                }
+            }
+
+        }
+
+
+    }
+
+    .last-cont {
+        display: flex;
+        align-items: center;
+
+        .cost {
+            color: #393939;
+            text-align: right;
+            font-family: Poppins;
+            font-size: 0.875rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+
+            margin-right: 38px;
+        }
+
+        .delete-btn {
+            background: transparent;
+            border: none;
+
+            .delete-img {
+                width: 1.5625rem;
+                height: 1.5625rem;
+                flex-shrink: 0;
+            }
+        }
+
+    }
+}
