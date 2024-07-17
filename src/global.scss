@@ -70,3 +70,15 @@
         flex: 1 0 calc(35% - 55px);
     }
 }
+
+@media (max-width: 768px) {
+    .app {
+        flex-direction: column;
+        gap: 20px;
+        margin: 20px;
+
+        .left-container, .right-container {
+            flex: 1 0 100%;
+        }
+    }
+}
