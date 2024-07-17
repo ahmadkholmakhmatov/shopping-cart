@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { usePaymentInputs } from "react-payment-inputs";
 
 import "./paymentForm.scss";
 
 const PaymentForm = ({ totalCost }) => {
+  const { meta, getCardNumberProps, getExpiryDateProps, getCVCProps } =
+    usePaymentInputs();
+
   const [cardType, setCardType] = useState("");
   const [formData, setFormData] = useState({
     name: "",
@@ -47,6 +51,11 @@ const PaymentForm = ({ totalCost }) => {
       cvv: "",
     });
     setCardType("");
+  };
+
+  const handleCardDetailChange = (e) => {
+    handleInputChange(e);
+    e.persist();
   };
 
   const handleCardDisplay = () => {
@@ -122,17 +131,22 @@ const PaymentForm = ({ totalCost }) => {
             Card Number
           </label>
 
-          <input
+          {/* <input
             maxLength="20"
             type="text"
             name="cardNumber"
-            inputmode="numeric"
-            autocomplete="cc-number"
-            pattern="[0-9\s]{13,19}" 
             placeholder="xxxx xxxx xxxx xxxx"
             value={handleCardDisplay()}
             onChange={handleInputChange}
             required
+          /> */}
+
+          <input
+            maxLength="20"
+            placeholder="xxxx xxxx xxxx xxxx"
+            required
+            {...getCardNumberProps({ onChange: handleCardDetailChange })}
+            value={handleCardDisplay()}
           />
         </div>
 
@@ -142,12 +156,22 @@ const PaymentForm = ({ totalCost }) => {
               Expiration date
             </label>
 
-            <input
+            {/* <input
               type="text"
               name="expirationDate"
               placeholder="mm/yy"
               value={formData.expirationDate}
               onChange={handleInputChange}
+              required
+            /> */}
+
+            <input
+              {...getExpiryDateProps({
+                onChange: handleCardDetailChange,
+                value: formData.expirationDate,
+              })}
+              name="expirationDate"
+              placeholder="mm/yy"
               required
             />
           </div>
@@ -156,13 +180,24 @@ const PaymentForm = ({ totalCost }) => {
             <label htmlFor="name" className="input-label">
               CVV
             </label>
-            <input
+            {/* <input
               maxLength="3"
               type="number"
               name="cvv"
               placeholder="123"
               value={formData.cvv}
               onChange={handleInputChange}
+              required
+            /> */}
+
+            <input
+              maxLength="3"
+              {...getCVCProps({
+                onChange: handleCardDetailChange,
+                value: formData.cvv,
+              })}
+              name="cvv"
+              placeholder="123"
               required
             />
           </div>
