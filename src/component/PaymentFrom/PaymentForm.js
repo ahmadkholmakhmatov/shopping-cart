@@ -4,7 +4,7 @@ import { usePaymentInputs } from "react-payment-inputs";
 import "./paymentForm.scss";
 
 const PaymentForm = ({ totalCost }) => {
-  const { meta, getCardNumberProps, getExpiryDateProps, getCVCProps } =
+  const { getCardNumberProps, getExpiryDateProps, getCVCProps } =
     usePaymentInputs();
 
   const [cardType, setCardType] = useState("");
@@ -42,7 +42,6 @@ const PaymentForm = ({ totalCost }) => {
       cardType: cardType,
     };
     // Process the form data
-    console.log("Form Data:", finalFormData);
 
     setFormData({
       name: "",
@@ -143,10 +142,10 @@ const PaymentForm = ({ totalCost }) => {
 
           <input
             maxLength="20"
-            placeholder="xxxx xxxx xxxx xxxx"
             required
             {...getCardNumberProps({ onChange: handleCardDetailChange })}
             value={handleCardDisplay()}
+            placeholder="xxxx xxxx xxxx xxxx"
           />
         </div>
 

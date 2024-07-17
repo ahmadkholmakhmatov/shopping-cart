@@ -50,10 +50,6 @@ function App() {
     );
   };
 
-
-
-  console.log(products);
-
   useEffect(() => {
     const newTotalCost = products.reduce(
       (acc, product) => acc + product.cost,
