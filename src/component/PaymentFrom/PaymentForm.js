@@ -35,13 +35,13 @@ const PaymentForm = ({ totalCost }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Merge finalTotalCost and cardType into formData for submission
+
     const finalFormData = {
       ...formData,
       totalCost: finalTotalCost,
       cardType: cardType,
     };
-    // Process the form data
+
 
     setFormData({
       name: "",
